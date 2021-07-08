@@ -25,6 +25,8 @@ export class InicioComponent implements OnInit {
   user: User = new User
   idUser = environment.id
 
+  
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
@@ -42,6 +44,7 @@ export class InicioComponent implements OnInit {
     this.getAllTemas()
     this.getAllPostagens()
     this.findByIdUser()
+    this.temaService.refreshToken()
   }
 
   getAllTemas() {
